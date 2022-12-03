@@ -10,6 +10,7 @@ import { HEROES } from "../mock-heroes";
 export class HeroesComponent implements OnInit {
 
   heroes = HEROES;
+  selectedHero?: Hero;
 
   // hero: Hero = {
   //   id: 1,
@@ -20,5 +21,11 @@ export class HeroesComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  onSelect(hero: Hero): void {
+    console.warn(hero)
+    this.selectedHero=hero;
+  }
+
 
 }
